@@ -3,6 +3,7 @@ fetch(url)
   .then((response) => {
     return response.json();
   })
+  //test
   .then((data) => {
     // console.log(data);
     if (data.length > 0) {
