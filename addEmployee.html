@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/css.css">
+    <link rel="stylesheet" href="./assets/css/content.css">
+    <link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        .fa-pencil:before {
+            padding: 11px;
+            content: "\f040";
+        }
+
+        #top-content-container {
+            /* margin: 34px; */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #form-table-container {
+            margin: 34px;
+        }
+
+        #user-table {
+            width: 95%;
+            margin: auto;
+
+        }
+
+        #modal-body-custom {
+            max-width: 60%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <div style="height:90px;width:200px;background-image: url('./images/DITS.jpg');background-repeat: no-repeat;
+                                                            background-size: 100%;"></div>
+            </div>
+
+            <ul class="list-unstyled components">
+                <!-- dashboard  -->
+                <li>
+                    <a href="dashboard.html"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; Dashboard</a>
+                </li>
+                <!-- company details -->
+                <li>
+                    <a href="companyDetails.html"><i class="fa fa-university" aria-hidden="true"></i>&nbsp; Company
+                        Details</a>
+                </li>
+                <!-- employee starts -->
+                <li>
+                    <a href="addEmployee.html"><i class="fa fa-users" aria-hidden="true"></i>&nbsp; Employees</a>
+                </li>
+                <!-- department start -->
+                <li>
+                    <a href="department.html"><i class="fa fa-modx" aria-hidden="true"></i>&nbsp; Department</a>
+                </li>
+                <!-- designation start -->
+                <li>
+                    <a href="designation.html"><i class="fa fa-cube" aria-hidden="true"></i>&nbsp; Designation</a>
+                </li>
+        </nav>
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item" style="margin-top: 13px;">
+                                <input type="text" placeholder="Search.." name="search">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                                &nsc;
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html" style="color: #ffff;">
+                                    <h3>Logout</h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div>
+                <h3 style="margin-top:-20px;margin-left:30px;">Employees List</h3>
+
+                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal"
+                    style="margin-top:-65px;margin-left:88%;">
+                    + Add Employee
+                </button>
+                <br>
+            </div>
+
+            <!-- content will start from here -->
+            <!-- Modal -->
+            <!-- <div class="card" id="form-table-container" style="margin-top:-15px ;">  -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div id="modal-body-custom" class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                Enter Following Details
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <!-- modale body -->
+                        <div class="modal-body">
+                            <!-- form inside modale -->
+                            <form id="myForm">
+                                <!-- form row -->
+                                <div class="form-row">
+                                    <div class="form-group col-md-2">
+                                        <label for="inputEmail4">First Name</label>
+                                        <input type="text" class="form-control" id="fname" placeholder="First Name" />
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputEmail4">Last Name</label>
+                                        <input type="text" class="form-control" id="lname" placeholder="Last Name" />
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputPassword4">Father's Name</label>
+                                        <input type="text" class="form-control" id="fathername"
+                                            placeholder="Father Name" />
+                                    </div>
+                                    <div class="form-group col-md-2 ">
+                                        <label for="inputPassword4">Gender</label>
+                                        <input type="text" class="form-control" id="gender" placeholder="Gender" />
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputPassword4">Date of Birth</label>
+                                        <input type="date" class="form-control" id="dob" placeholder="Date of Birth" />
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="marital-status">Marital Status</label>
+                                        <select class="form-control" name="marital-status" id="ms">
+                                            <option value="0">--Select--</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+
+                                    <div class="form-group col-md-3">
+                                        <label for="inputEmail4">Qualification</label>
+                                        <input type="text" class="form-control" id="qualification"
+                                            placeholder="Enter Qualification" />
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="inputAddress2">Current Address</label>
+                                        <input type="text" class="form-control" id="caddress"
+                                            placeholder="Enter your address" />
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputZip">City</label>
+                                        <input type="text" class="form-control" id="city1" placeholder="city" />
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputZip">State</label>
+                                        <input type="text" class="form-control" id="state1" placeholder="state" />
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputZip">Zip Code</label>
+                                        <input type="text" class="form-control" id="Zip1" placeholder="zip" />
+                                    </div>
+
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label for="inputAddress">Permanent Address </label>
+                                        <input type="text" class="form-control" id="paddress"
+                                            placeholder="Enter your address" />
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputZip">City</label>
+                                        <input type="text" class="form-control" id="city2" placeholder="city" />
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputZip">State</label>
+                                        <input type="text" class="form-control" id="state2" placeholder="state" />
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputZip">Zip Code</label>
+                                        <input type="text" class="form-control" id="Zip2" placeholder="zip" />
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="inputAddress2">Phone</label>
+                                        <input type="text" class="form-control" id="phone"
+                                            placeholder="Enter your phone" />
+                                    </div>
+                                </div>
+                                <div class="form-row">
+
+                                    <div class="form-group col-md-3">
+                                        <label for="inputZip">Alternate Phone</label>
+                                        <input type="text" class="form-control" id="alphone"
+                                            placeholder="Enter your phone" />
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="inputAddress">Personal Email </label>
+                                        <input type="text" class="form-control" id="pemail"
+                                            placeholder="Enter your Email" />
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="inputAddress2">Official Email</label>
+                                        <input type="text" class="form-control" id="oemail"
+                                            placeholder="Enter your email" />
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="inputZip">Password</label>
+                                        <input type="text" class="form-control" id="pass"
+                                            placeholder="Enter Password" />
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-2">
+                                        <label for="gender">Role</label>
+                                        <select class="form-control" name="role" id="role">
+                                            <option value="0">--Select--</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="inputEmail4">Department</label>
+                                        <select class="form-control" name="department" id="dep">
+                                            <option value="0">--Select--</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="inputEmail4">Designation</label>
+                                        <select class="form-control" name="designation" id="des">
+                                            <option value="0">--Select--</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputEmail4">Profile</label>
+                                        <select class="form-control" name="designation" id="pro">
+                                            <option value="0">--Select--</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputEmail4">Skills</label>
+                                        <select class="form-control" id="skill" name="list" size="3" multiple>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-2">
+                                        <label for="inputPassword4">Offer Date</label>
+                                        <input type="date" class="form-control" id="offerdate"
+                                            placeholder="Offer Date" />
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputPassword4">Joining Date</label>
+                                        <input type="date" class="form-control" id="jdate" placeholder="Joining Date" />
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputEmail4">Years Of Experience</label>
+                                        <input type="text" class="form-control" id="experience"
+                                            placeholder="Enter Experience" />
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="inputZip">Attach Image</label>
+                                        <input type="file" class="form-control" id="image" placeholder="state" />
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="inputZip">Attach Documents</label>
+                                        <input type="file" class="form-control" id="inputZip1"
+                                            placeholder="Experience" />
+                                        <!-- <input type="file" class="form-control" id="inputZip2" placeholder="state" />
+                                        <input type="file" class="form-control" id="inputZip3" placeholder="state" />
+                                        <input type="file" class="form-control" id="inputZip4" placeholder="state" />
+                                        <input type="file" class="form-control" id="inputZip5" placeholder="state" /> -->
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" onclick="addemp()" class="btn btn-primary">
+                                Submit
+                            </button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                Cancel
+                            </button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- table -->
+            <table class="table" id="user-table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Father's Name</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Years Of Experience</th>
+                        <th scope="col">Department</th>
+                        <th scope="col">Profile</th>
+                        <th scope="col">Skills</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="dat">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+    <!-- bootstrap linking -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="Employee.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/css.css">
+  <link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="./assets/css/content.css">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+  <div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <div style="height:90px;width:200px;background-image: url('./images/DITS.jpg');background-repeat: no-repeat;
+                                                    background-size: 100%;"></div>
+      </div>
+
+      <ul class="list-unstyled components">
+
+        <!-- dashboard  -->
+        <li>
+          <a href="dashboard.html">Dashboard</a>
+        </li>
+
+
+        <!-- company details -->
+        <li>
+          <a href="companyDetails.html">Company Details</a>
+        </li>
+
+
+
+        <!-- employee starts -->
+        <li>
+          <a href="addEmployee.html">Add Employee</a>
+        </li>
+
+
+
+
+
+        <!-- department start -->
+        <li>
+          <a href="department.html">Department</a>
+        </li>
+
+
+
+        <!-- designation start -->
+        <li>
+          <a href="designation.html">Designation</a>
+        </li>
+
+
+    </nav>
+
+
+
+    <!-- Page Content  -->
+    <div id="content">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+          <button type="button" id="sidebarCollapse" class="btn btn-info">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+          <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-align-justify"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+              <li class="nav-item" style="margin-top: 13px;">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+                &nsc;
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- content will start from here -->
+
+
+      <div class="card" id="form-table-container">
+        <!-- modal containing form inside -->
+        <!-- Button trigger modal -->
+        <div id="top-content-container">
+          <h1>Users</h1>
+          <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
+            Add new user
+          </button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div id="modal-body-custom" class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Enter Following details
+                </h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <!-- modale body -->
+              <div class="modal-body">
+                <!-- form inside modale -->
+                <form>
+                  <div class="form-row">
+                    <div class="form-group col-md-6 ">
+                      <label for="inputEmail4">First Name</label>
+                      <input type="text" class="form-control" id="inputEmail4" placeholder="Enter First Name" />
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4">Last Name</label>
+                      <input type="text" class="form-control" id="inputEmail4" placeholder="Enter Last Name" />
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4">Phone</label>
+                      <input type="number" class="form-control" id="inputEmail4" placeholder="Enter phone" />
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4">Email</label>
+                      <input type="email" class="form-control" id="inputEmail4" placeholder="Enter Email" />
+                    </div>
+                  </div>
+
+
+
+                  <div class="form-group">
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" />
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputCity">City</label>
+                      <input type="text" class="form-control" id="inputCity" />
+                    </div>
+                    <div class="form-group col-md-2">
+                      <label for="inputCity">State</label>
+                      <input type="text" class="form-control" id="inputCity" />
+                    </div>
+
+                    <div class="form-group col-md-2">
+                      <label for="inputZip">Zip</label>
+                      <input type="text" class="form-control" id="inputZip" />
+                    </div>
+                  </div>
+                  <!-- username and password -->
+                  <div class="form-row">
+
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4">Username</label>
+                      <input type="text" class="form-control" id="inputEmail4" placeholder="Enter Username" />
+                    </div>
+
+
+                    <div class="form-group col-md-6">
+                      <label for="inputPassword4">Password</label>
+                      <input type="password" class="form-control" id="inputPassword4" placeholder="Password" />
+                    </div>
+
+                  </div>
+
+                  <div class="form-row">
+                    <!-- role type -->
+                    <div class="form-group col-md-4">
+                      <label for="role-type">Role type</label>
+                      <select class="form-control" name="role-type" id="">
+                        <option value="Admin">Admin</option>
+                        <option value="HR">HR</option>
+                        <option value="Employee">Employee</option>
+                      </select>
+                    </div>
+                    <div class="card form-group col-md-2">
+                      <p> Active/Inactive :</p>
+                      <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                  Cancel
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- table -->
+        <table class="table" id="user-table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">User Id</th>
+              <th scope="col">Full Name</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Email</th>
+              <th scope="col">Username</th>
+              <th scope="col">Password</th>
+              <th scope="col">Role Type</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark Sharma</td>
+              <td>9834634632</td>
+              <td>dummytext@gmail.com</td>
+              <td>markSharma3553</td>
+              <td>Passw0rd@3434</td>
+              <td>HR</td>
+              <td>
+                <!-- action icons here -->
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark Sharma</td>
+              <td>9834634632</td>
+              <td>dummytext@gmail.com</td>
+              <td>markSharma3553</td>
+              <td>Passw0rd@3434</td>
+              <td>HR</td>
+              <td>
+                <!-- action icons here -->
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark Sharma</td>
+              <td>9834634632</td>
+              <td>dummytext@gmail.com</td>
+              <td>markSharma3553</td>
+              <td>Passw0rd@3434</td>
+              <td>HR</td>
+              <td>
+                <!-- action icons here -->
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+  <!-- bootstrap linking -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

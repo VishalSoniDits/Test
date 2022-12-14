@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style type="text/css">
+        form {
+            width: 400px;
+            margin: 325px auto;
+        }
+
+        div {
+            width: 100%;
+            margin: 15px auto;
+        }
+
+        label {
+            display: block;
+            padding: 20px;
+            font-size: 25px;
+
+        }
+
+        input {
+            width: 85%;
+            padding: 10px;
+            border: 1px solid#797979;
+            font: size 20px;
+            margin-left: 20px;
+            border-radius: 3px;
+        }
+
+        a {
+            margin: 20px;
+            padding: 15px;
+            width: 400px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 25px;
+            font-weight: bold;
+            color: whitesmoke;
+            background: linear-gradient(90deg, rgb(224, 18, 18), rgb(52, 172, 5));
+        }
+
+        span {
+            display: block;
+            margin-left: 20px;
+            color: red;
+            font-style: italic;
+        }
+
+        body {
+            background-image: url('./images/login_bg.jpg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <form action=" Login.html" method="POST">
+        <br></br>
+        <div>
+            <!-- <lable for=" username" style="font-size: 20px;margin-left: 15px;">User Name:-</lable> -->
+            <input type="text" id="name" name="username" placeholder="User Name">
+            <span></span>
+            <br>
+            <!-- <lable for="password" style="font-size: 20px;margin-left: 15px;">Password :-</lable> &nbsp; -->
+            <input type="password" id="pass" name="password" placeholder="Password">
+            <span></span>
+        </div>
+        <br>
+        <!-- <button href="dashboard.html" onclick="checklogin()" id="log-in">Log-in</button> -->
+        <center>
+            <a onclick="checklogin()" id="log-in">Log In</a>
+        </center>
+    </form>
+</body>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="login.js"></script>
+
+</html>

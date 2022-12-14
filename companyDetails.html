@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/css.css">
+    <link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./assets/css/content.css">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <div style="height:90px;width:200px;background-image: url('./images/DITS.jpg');background-repeat: no-repeat;
+                                                            background-size: 100%;"></div>
+            </div>
+
+            <ul class="list-unstyled components">
+
+                <!-- dashboard  -->
+                <li>
+
+                    <a href="dashboard.html"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; Dashboard</a>
+                </li>
+                <!-- company details -->
+                <li>
+                    <a href="companyDetails.html"><i class="fa fa-university" aria-hidden="true"></i>&nbsp; Company
+                        Details</a>
+                </li>
+                <!-- employee starts -->
+                <li>
+                    <a href="addEmployee.html"><i class="fa fa-users" aria-hidden="true"></i>&nbsp; Employees</a>
+                </li>
+                <!-- department start -->
+                <li>
+                    <a href="department.html"><i class="fa fa-modx" aria-hidden="true"></i>&nbsp; Department</a>
+                </li>
+                <!-- designation start -->
+                <li>
+                    <a href="designation.html"><i class="fa fa-cube" aria-hidden="true"></i>&nbsp; Designation</a>
+                </li>
+
+
+        </nav>
+
+
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html" style="color:#ffff;">
+                                    <h3>Logout</h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- content will start from here -->
+            <!-- table -->
+            <h3>India Office :-</h3>
+            <table class="table " id="user-table">
+
+                <tbody>
+                    <tr>
+                        <th scope="col">Company Name : </th>
+                        <td>Ditstech Innovations</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Location : </th>
+                        <td>SCO - 356 , First Floor, 44-D, Chandigarh, 160047</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Website :</th>
+                        <td>www.ditstek.com</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Email : </th>
+                        <td>info@ditstek.com</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Phone : </th>
+                        <td>+91-623-942-1395</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <h3>USA Office :-</h3>
+            <table class="table" id="user-table">
+                <tbody>
+                    <tr>
+                        <th scope="col">Location : </th>
+                        <td>1500 Poly Dr, Suite 107 Billings, MT, USA</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Email : </th>
+                        <td>tom@whitewater.dev</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Phone : </th>
+                        <td>+1-406-672-8292</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <!-- bootstrap linking -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
